@@ -56,13 +56,11 @@ export default function Projects() {
                     Current page: <a href={project.currentPage.url} target="_blank" rel="noreferrer">{project.currentPage.title}</a>
                   </p>
                   <div className={styles.pagePreview}>
-                    <iframe
-                      src={project.currentPage.url}
-                      title={`${project.name}: ${project.currentPage.title} preview`}
+                    <img
+                      src={project.snapshot}
+                      alt={`${project.name}: ${project.currentPage.title} snapshot`}
                       loading="lazy"
-                      referrerPolicy="no-referrer"
-                      sandbox="allow-scripts"
-                      tabIndex={-1}
+                      decoding="async"
                     />
                   </div>
                 </li>
